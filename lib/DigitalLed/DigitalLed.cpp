@@ -1,16 +1,21 @@
 #include "DigitalLed.h"
 
-DigitalLed::DigitalLed(int p, int s, bool c = true)
-    : _pin(p), _state(s), _configSource(c) {
+DigitalLed::DigitalLed(int p, int s, bool c = DIGITAL_LED_CONFIG_SOURCE)
+    : _pin(p), _state(s), _configSource(c)
+{
   pinMode(this->_pin, OUTPUT);
   this->set(this->_state);
 };
 
-void DigitalLed::set(int s) {
+void DigitalLed::set(int s)
+{
   this->_state = s;
-  if (this->_configSource) {
+  if (this->_configSource)
+  {
     digitalWrite(this->_pin, s ? HIGH : LOW);
-  } else {
+  }
+  else
+  {
     digitalWrite(this->_pin, s ? LOW : HIGH);
   }
 }

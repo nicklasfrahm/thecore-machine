@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-const bool LED_CONFIG_SOURCE = true;
-const bool LED_CONFIG_SINK = false;
+const bool DIGITAL_LED_CONFIG_SOURCE = true;
+const bool DIGITAL_LED_CONFIG_SINK = false;
 
 class DigitalLed
 {

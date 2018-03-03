@@ -17,7 +17,7 @@ const uint8_t LED_STATUS = LED_ONCHIP;
 // instantiate necessary classes
 ESP8266WiFiMulti wifi;
 SocketIoClient sio;
-DigitalLed statusLed(LED_ONCHIP, LOW, LED_CONFIG_SINK);
+DigitalLed statusLed(LED_ONCHIP, LOW, DIGITAL_LED_CONFIG_SINK);
 
 // toggle event handler
 void toggle(const char *payload, size_t length)
