@@ -14,6 +14,13 @@ pio lib install SocketIoClient
 pio lib install WebSockets
 ```
 
+Create the file `src/env.h` and put in the following:
+
+```cpp
+#define WIFI_SSID "wifi-network"
+#define WIFI_PASS "wifi-password"
+```
+
 Then it can be compiled and uploaded to the device.
 
 ```shell
