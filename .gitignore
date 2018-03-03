@@ -1,5 +1,7 @@
 ### Project specific settings ###
 .vscode/*.DB*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
 src/env.h
 
 # Created by https://www.gitignore.io/api/linux,macos,windows,platformio
@@ -74,3 +76,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/linux,macos,windows,platformio
+.vscode/*.db
