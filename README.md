@@ -26,3 +26,7 @@ Then it can be compiled and uploaded to the device.
 ```shell
 pio run --target upload
 ```
+
+## License
+
+This project is relased under the [MIT license](https://mit-license.org).
