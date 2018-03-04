@@ -60,7 +60,7 @@ void setup(void)
   // configure websockets
   Serial.println("[SIO] Configuring event listeners ...");
   sio.on("toggle", toggle);
-  sio.begin("192.168.2.24", 3000, "/sio");
+  sio.begin(SIO_HOST, SIO_PORT, SIO_PATH);
 
   // enable LED
   Serial.println("[LED] Indicating successful setup ...");

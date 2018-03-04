@@ -19,6 +19,26 @@ Create the file `src/env.h` and put in the following:
 ```cpp
 #define WIFI_SSID "wifi-network"
 #define WIFI_PASS "wifi-password"
+
+#define SIO_HOST "server.ip.tld"
+#define SIO_PORT 3000
+#define SIO_PATH "/sio/?transport=websocket"
+```
+
+**Note:** Modify the parameters according to your deployment.
+
+Open the file `.piolibdeps/SocketIoClient_ID1942/SocketIoClient.h` and search for this:
+
+```cpp
+#define SOCKETIOCLIENT_DEBUG(...) Serial.printf(__VA_ARGS__);
+//#define SOCKETIOCLIENT_DEBUG(...)
+```
+
+Modify it to this:
+
+```cpp
+//#define SOCKETIOCLIENT_DEBUG(...) Serial.printf(__VA_ARGS__);
+#define SOCKETIOCLIENT_DEBUG(...)
 ```
 
 Then it can be compiled and uploaded to the device.
